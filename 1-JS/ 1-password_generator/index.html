@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Şifre Oluşturucu</title>
+</head>
+<body>
+    <main>
+  <h1>Şifre Oluşturucu</h1>
+
+  <form id="password-form">
+    <div>
+      <label for="length">Şifre uzunluğu</label>
+      <input
+        id="length"
+        name="length"
+        type="number"
+        min="8"
+        max="64"
+        step="1"
+        value="16"
+        required
+      >
+    </div>
+
+    <fieldset>
+      <legend>Karakter türleri</legend>
+
+      <div>
+        <input id="lowercase" type="checkbox" checked>
+        <label for="lowercase">Küçük harf (a–z)</label>
+      </div>
+
+      <div>
+        <input id="uppercase" type="checkbox" checked>
+        <label for="uppercase">Büyük harf (A–Z)</label>
+      </div>
+
+      <div>
+        <input id="numbers" type="checkbox" checked>
+        <label for="numbers">Rakam (0–9)</label>
+      </div>
+
+      <div>
+        <input id="symbols" type="checkbox" checked>
+        <label for="symbols">Sembol (!@#$…)</label>
+      </div>
+    </fieldset>
+
+    <button type="submit">Şifre oluştur</button>
+
+    <div>
+      <label for="password-output">Oluşturulan şifre</label>
+      <input
+        id="password-output"
+        type="text"
+        readonly
+        spellcheck="false"
+        autocomplete="off"
+      >
+    </div>
+
+    <button id="copy-button" type="button" disabled>
+      Kopyala
+    </button>
+
+    <p id="status" role="status" aria-live="polite"></p>
+  </form>
+</main>
+</body>
+</html>
